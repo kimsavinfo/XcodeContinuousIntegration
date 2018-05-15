@@ -25,6 +25,7 @@ class GameScorer: NSObject {
             break
         case 15, 0:
             score += 15
+            break
         default:
             break
         }

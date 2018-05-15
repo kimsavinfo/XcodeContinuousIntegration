@@ -47,4 +47,28 @@ class GameScorerTests: XCTestCase {
         XCTAssert(scorer.getScore() == 0, "Score is wrong, should be 0")
     }
     
+    func testFor() {
+        var scoreToCheck = 0
+        
+        for i in 0...3 {
+            switch i {
+            case 1:
+                scoreToCheck = 15
+                break
+            case 2:
+                scoreToCheck = 31
+                break
+            case 3:
+                scoreToCheck = 41
+                break
+            default:
+                scoreToCheck = 0
+                break
+            }
+            XCTAssert(scorer.getScore() == scoreToCheck, "Score is wrong, should be \(scoreToCheck)")
+            
+            scorer.addPoint()
+        }
+    }
+    
 }
